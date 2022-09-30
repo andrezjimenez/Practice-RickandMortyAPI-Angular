@@ -1,0 +1,18 @@
+.profile-character{
+    
+}
+
+.character-name{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+}
+.character-image{
+    padding-top: 8px;
+}
+.character-information{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    grid-gap: 8px;
+}

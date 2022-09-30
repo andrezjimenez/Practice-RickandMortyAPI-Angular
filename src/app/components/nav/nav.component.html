@@ -1,0 +1,36 @@
+<div class="show-mobile">
+    <div>
+      <button (click)="toggleMenu()" >
+        <img  alt="menu" src="../../../assets/img/menu.png" alt="logo" class="menu-icon--mobile">
+      </button>
+      
+      <div>
+        <img class="hide-mobile--logo" src="../../../assets/img/Rick-and-Morty.png" alt="logo"> 
+      </div>
+  
+    </div>
+    <div class="side-menu" [class.active]="activeMenu">
+      <button (click)="toggleMenu()">Close</button>
+      <ul>
+        <li><a href="">All</a></li>
+        <li><a href="">Clothes</a></li>
+        <li><a href="">Electronics</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="hide-mobile">
+    <div>
+      <nav>
+        <div>
+          <img class="hide-mobile--logo" src="../../../assets/img/Rick-and-Morty.png" alt="logo"> 
+        </div>
+        <ul>
+          <li><a href="">Characters</a></li>
+          <li><a href="">Locations</a></li>
+          <li><a href="">Episodes</a></li>
+        </ul>
+      </nav>
+     
+    </div>
+  </div>
+  
