@@ -1,18 +1,93 @@
 .profile-character{
-    
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #b1d848;
+    border-radius: 24px;
+    /* background-color: #f3f1e1; */
 }
 
 .character-name{
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 8px;
+    font-weight: bold;
 }
 .character-image{
-    padding-top: 8px;
+    text-align: center;
+    
+    border-radius: 50%;
+    /* padding: 3px;   */
+    margin: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #b1d848;
+    background-color: #b1d848;    
 }
+.character-logo{
+    width:95%;
+    height:95%;
+    border-radius: 50%
+}
+.basic-information{
+    text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
 .character-information{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
     grid-gap: 8px;
+    text-align: center;
 }
+.character-information--left{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-weight: bold;
+
+}
+.character-information--right{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.character-information--left p{
+    padding-bottom: 4px;
+}
+.character-information--right p{
+    padding-bottom: 3px;
+}
+.button-moreInformation{
+    margin: 5%;
+    width: 90%;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    height: 32px;    
+    background-color: #b1d848;
+}
+.button-moreInformation:hover{
+  cursor: pointer;
+    background-color: #d7f583;
+}
+
+
+/* @media screen and (min-width: 40em) and (max-width: 63.9em){
+     .character-logo {
+        width: 80%;
+        height: 80%;
+      }
+  }
+  
+  
+  @media screen and (min-width: 64em){
+   
+  }
+   */

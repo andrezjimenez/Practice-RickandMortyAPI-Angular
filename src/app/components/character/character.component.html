@@ -3,19 +3,28 @@
 <div class="profile-character">
     <div class="character-name">
         <h1> {{character.name}} </h1>
-        <div class="character-image">
-            <img [src]="character.image" alt="" class="character-logo">
-        </div>        
     </div>
-    <p>Basic Information</p>
+    <div class="character-image">
+        <img [src]="character.image" alt="" class="character-logo">
+    </div>        
+    
+    <p class="basic-information">Basic Information</p>
     <div class="character-information">
-        <label for="">Status:</label>
-        <p>{{character.status}}</p>
-        <label for="">Specie:</label>
-        <p>{{character.species}}</p>
-        <label for="">Type:</label>
-        <p>{{character.type}}</p>
-        <label for="">Gender:</label>
-        <p>{{character.gender}}</p>
+        <div class="character-information--left">
+            <p>Status:</p>
+            <p>Specie:</p>
+            <p>Type:</p>
+            <p>Gender:</p>
+        </div>
+        <div class="character-information--right">
+            <p>{{character.status}}</p>
+            <p>{{character.species}}</p>
+            <p>{{character.type}}</p>        
+            <p>{{character.gender}}</p>
+        </div>
+             
     </div>
+    <div>
+        <button class="button-moreInformation">More Information...</button>
+    </div>  
 </div>
