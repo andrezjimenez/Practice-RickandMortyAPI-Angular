@@ -5,6 +5,9 @@
     border-style: solid;
     border-color: #b1d848;
     border-radius: 24px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
     /* background-color: #f3f1e1; */
 }
 
@@ -41,7 +44,7 @@
 .character-information{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 8px;
+    grid-gap: 2px;
     text-align: center;
 }
 .character-information--left{
@@ -72,6 +75,7 @@
     border: none;
     height: 32px;    
     background-color: #b1d848;
+    border-radius: 12px
 }
 .button-moreInformation:hover{
   cursor: pointer;

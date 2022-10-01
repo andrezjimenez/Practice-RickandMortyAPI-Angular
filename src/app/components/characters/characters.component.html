@@ -1,8 +1,21 @@
+<button (click)="toggleCharacterDetail()">clic</button>
 <div class="character--grid">
     <app-character
         [character]="character"
         *ngFor="let character of characters"
+        (showcharacterDetails)="onshowdetail($event)"
     >
     <p>s</p>
     </app-character>
+</div>
+<div class="character-detail" [class.active]="showCharacterDetails">
+    <h1>{{characterChosen.name}}</h1>
+    <h1>{{characterChosen.status}}</h1>
+    <h1>{{characterChosen.species}}</h1>
+    <h1>{{characterChosen.type}}</h1>
+    <h1>{{characterChosen.gender}}</h1>
+    <h1>{{characterChosen.origin?.name}}</h1>
+    <h1>{{characterChosen.origin?.url}}</h1>
+    <h1>{{characterChosen.episode}}</h1>
+    <h1>{{characterChosen.episode}}</h1>
 </div>

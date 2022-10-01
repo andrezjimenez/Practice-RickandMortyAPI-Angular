@@ -28,10 +28,15 @@ export class CharacterComponent implements OnInit {
       url: '',
       created: ''
   }
+  @Output() showcharacterDetails = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void { 
   }
+
+  onShowCharacterDetail(){
+    this.showcharacterDetails.emit(this.character.id);
+}
 
 }
