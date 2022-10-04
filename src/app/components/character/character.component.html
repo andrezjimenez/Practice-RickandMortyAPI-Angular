@@ -11,18 +11,14 @@
     <p class="basic-information">Basic Information</p>
     <div class="character-information">
         <div class="character-information--left">
-            <p>Status:</p>
             <p>Specie:</p>
-            <p>Type:</p>
-            <p>Gender:</p>
+            <p>Origin:</p>
         </div>
         <div class="character-information--right">
-            <p>{{character.status}}</p>
             <p>{{character.species}}</p>
-            <p>{{character.type}}</p>        
-            <p>{{character.gender}}</p>
+            <p>{{character.origin?.name}}</p>
+           
         </div>
-             
     </div>
     <div>
         <button class="button-moreInformation" (click)="onShowCharacterDetail()">More Information...</button>

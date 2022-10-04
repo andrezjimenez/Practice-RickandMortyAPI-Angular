@@ -1,4 +1,4 @@
-<button (click)="toggleCharacterDetail()">clic</button>
+
 <div class="character--grid">
     <app-character
         [character]="character"
@@ -9,13 +9,80 @@
     </app-character>
 </div>
 <div class="character-detail" [class.active]="showCharacterDetails">
-    <h1>{{characterChosen.name}}</h1>
-    <h1>{{characterChosen.status}}</h1>
-    <h1>{{characterChosen.species}}</h1>
-    <h1>{{characterChosen.type}}</h1>
-    <h1>{{characterChosen.gender}}</h1>
-    <h1>{{characterChosen.origin?.name}}</h1>
-    <h1>{{characterChosen.origin?.url}}</h1>
-    <h1>{{characterChosen.episode}}</h1>
-    <h1>{{characterChosen.episode}}</h1>
+    
+    <div class="more-information--title">
+        <button (click)="toggleCharacterDetail()" class="button-more-information"> 
+            <img  alt="menu" src="../../../assets/img/backpng.png" alt="logo" class="menu-icon--back">
+        </button>
+        <h1>{{characterChosen.name}}</h1>
+        
+    </div>
+    <div class="character-detail-information">
+        
+        <div class="character-detail-tagg" >
+            <div class="character-image">
+                    <img [src]="characterChosen.image" alt="" class="character-logo">
+                </div> 
+        </div>
+        <div class="character-detail-tagg">
+            <div class="character-detail-tagg--name">
+                <h1>Status:</h1>
+            </div>
+            <div class="character-detail-tagg--information">
+                <p *ngIf=" characterChosen.status === 'Alive';  else elseBlock" >
+                    <img src="../../../assets/img/alive.png" alt="" class="character-gender">
+                </p>
+                <ng-template #elseBlock>
+                    <img src="../../../assets/img/dead.png" alt="" class="character-gender">
+                </ng-template>
+                <!-- {{characterChosen.status}} -->
+            </div>
+        </div>
+        <div class="character-detail-tagg">
+            <div class="character-detail-tagg--name">
+                <h1>Specie:</h1>
+            </div>
+            <div class="character-detail-tagg--information">
+                {{characterChosen.species}}
+            </div>
+        </div>
+        <div class="character-detail-tagg">
+            <div class="character-detail-tagg--name">
+                <h1>Type:</h1>
+            </div>
+            <div class="character-detail-tagg--information">
+                {{characterChosen.type}}
+            </div>
+        </div>
+        <div class="character-detail-tagg">
+            <div class="character-detail-tagg--name">
+                <h1>Gender:</h1>
+            </div>
+            <div class="character-detail-tagg--information">
+                <!-- <p *ngIf=" characterChosen.gender === 'Male' " >asasdasdasda</p> -->
+                <p *ngIf=" characterChosen.gender === 'Male';  else elseBlockGender" >
+                    <img src="../../../assets/img/male.png" alt="" class="character-gender">
+                    
+                </p>
+                <ng-template #elseBlockGender>
+                    <img src="../../../assets/img/female.png" alt="" class="character-gender">
+                </ng-template>
+                
+            
+            </div>
+        </div>
+        <div class="character-detail-tagg">
+            <div class="character-detail-tagg--name">
+                <h1>Origin:</h1>
+            </div>
+            <div class="character-detail-tagg--information">
+                {{characterChosen.origin?.name}}
+            </div>
+        </div>
+        <!-- <h1>{{characterChosen.origin?.url}}</h1> -->
+        <!-- <h1>{{characterChosen.episode}}</h1> -->
+        
+    </div>
+    
+   
 </div>
