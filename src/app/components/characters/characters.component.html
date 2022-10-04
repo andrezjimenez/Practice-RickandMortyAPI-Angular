@@ -29,13 +29,12 @@
                 <h1>Status:</h1>
             </div>
             <div class="character-detail-tagg--information">
-                <p *ngIf=" characterChosen.status === 'Alive';  else elseBlock" >
-                    <img src="../../../assets/img/alive.png" alt="" class="character-gender">
+                <p *ngIf=" characterChosen.status === 'Alive';  else secondBlock" >
+                    <img src="../../../assets/img/alive.png" alt="Alive" class="character-gender">
                 </p>
-                <ng-template #elseBlock>
-                    <img src="../../../assets/img/dead.png" alt="" class="character-gender">
-                </ng-template>
-                <!-- {{characterChosen.status}} -->
+                <ng-template #secondBlock   >
+                    <img src="../../../assets/img/dead.png" alt="Dead" class="character-gender">
+                </ng-template> 
             </div>
         </div>
         <div class="character-detail-tagg">
@@ -61,14 +60,12 @@
             <div class="character-detail-tagg--information">
                 <!-- <p *ngIf=" characterChosen.gender === 'Male' " >asasdasdasda</p> -->
                 <p *ngIf=" characterChosen.gender === 'Male';  else elseBlockGender" >
-                    <img src="../../../assets/img/male.png" alt="" class="character-gender">
+                    <img src="../../../assets/img/male.png" alt="Male" class="character-gender">
                     
                 </p>
                 <ng-template #elseBlockGender>
-                    <img src="../../../assets/img/female.png" alt="" class="character-gender">
-                </ng-template>
-                
-            
+                    <img src="../../../assets/img/female.png" alt="Female" class="character-gender">
+                </ng-template>            
             </div>
         </div>
         <div class="character-detail-tagg">
@@ -79,10 +76,30 @@
                 {{characterChosen.origin?.name}}
             </div>
         </div>
+        <div class="character-episodes" item>
+            <h1>Episodes</h1>
+            <ul>
+                <li *ngFor="let episode of characterChosen.episode; index as i">
+                    {{i+1}} {{episode}}
+                </li>
+            </ul>
+            <!-- <p>
+                {{characterChosen.episode}}
+            </p> -->
+        </div>
+        <div class="character-detail-tagg">
+            <div class="character-detail-tagg--name">
+                <h1>Created:</h1>
+            </div>
+            <div class="character-detail-tagg--information">
+                {{characterChosen.created}}
+            </div>
+        </div>
         <!-- <h1>{{characterChosen.origin?.url}}</h1> -->
         <!-- <h1>{{characterChosen.episode}}</h1> -->
-        
     </div>
-    
+    <div class="more-information--title" (click)="toggleCharacterDetail()">        
+            <img  alt="menu" src="../../../assets/img/backpng.png" alt="logo" class="menu-icon--back">
+    </div>
    
 </div>
