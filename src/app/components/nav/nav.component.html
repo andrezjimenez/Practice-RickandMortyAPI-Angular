@@ -12,8 +12,8 @@
     <div class="side-menu" [class.active]="activeMenu">
       <button (click)="toggleMenu()">Close</button>
       <ul>
-        <li><a href="">Characters</a></li>
-        <li><a href="">Locations</a></li>
+        <li><a  routerLink="/home" >Characters</a></li>
+        <li><a  routerLink="/locations">Locations</a></li>
         <li><a href="">Episodes</a></li>
       </ul>
     </div>
@@ -25,8 +25,8 @@
           <img class="hide-mobile--logo" src="../../../assets/img/Rick-and-Morty.png" alt="logo"> 
         </div>
         <ul>
-          <li class="option-nav"><a href="" >Characters</a></li>
-          <li class="option-nav"><a href="">Locations</a></li>
+          <li class="option-nav"><a routerLink="/home" >Characters</a></li>
+          <li class="option-nav"><a routerLink="/locations">Locations</a></li>
           <li class="option-nav"><a href="">Episodes</a></li>
         </ul>
       </nav>

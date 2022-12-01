@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { CharacterComponent } from './components/character/character.component';
 import { CharactersComponent } from './components/characters/characters.component';
+import { LocationComponent } from './components/location/location.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     CharacterComponent,
-    CharactersComponent
+    CharactersComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
