@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input, Output,EventEmitter } from '@angular/core';
 import { Location } from '../../models/location.models'
-import { RickandmortyapiService } from './../../services/rickandmortyapi.service'
 
 @Component({
   selector: 'app-location',
@@ -9,18 +8,21 @@ import { RickandmortyapiService } from './../../services/rickandmortyapi.service
 })
 export class LocationComponent implements OnInit {
 
-  locations: Location[] = [];
+  @Input() location: Location = {
+    id: 0,
+    name: '',
+    type: '',
+    residents : [],
+    dimension: '',
+    url: '',
+    created: '',
+  }
+  // @Output() showLocationDetails = new EventEmitter<number>();
 
-  constructor(
-    private rickandmortyapiService: RickandmortyapiService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.rickandmortyapiService.getAllLocations()
-    .subscribe(data => {
-      this.locations = data;
-      console.log(this.locations);
-    })
+  
   }
 
 }

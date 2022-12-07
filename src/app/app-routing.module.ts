@@ -4,6 +4,7 @@ import { RouterModule,Routes } from '@angular/router';
 import { CharactersComponent } from './components/characters/characters.component';
 
 import { LocationComponent } from './components/location/location.component';
+import { LocationsComponent } from './components/locations/locations.component';
 
 const routes: Routes = [
     {
@@ -12,7 +13,7 @@ const routes: Routes = [
     },
     {
         path: 'locations',
-        component: LocationComponent
+        component: LocationsComponent
     }
 ];
 
