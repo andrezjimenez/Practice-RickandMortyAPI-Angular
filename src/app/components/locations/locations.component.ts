@@ -20,6 +20,7 @@ export class LocationsComponent implements OnInit {
     this.rickandmortyapiService.getAllLocations()
     .subscribe(data => {
       this.locations = data;
+      
       console.log(this.locations);
     })
   }

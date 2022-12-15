@@ -17,6 +17,9 @@ export class RickandmortyapiService {
     private http: HttpClient
     
   ) { }
+  getAllCharacter1(){
+    return this.http.get(`${this.apiUrl}/character/`);
+  }
 
   getAllCharacter(){
     return this.http.get<Character[]>(`${this.apiUrl}/character/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20`);
@@ -25,7 +28,9 @@ export class RickandmortyapiService {
     return this.http.get<Character>(`${this.apiUrl}character/${id}`);
   }
   getAllLocations(){
-    return this.http.get<Location[]>(`${this.apiUrl}/location/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20`);
+    return this.http.get<Location[]>(`${this.apiUrl}/location/1,2`);
   }
 
 }
+
+
