@@ -3,27 +3,35 @@
         Name:
     </div>
     <div>
-        {{location.name }}
+        {{episode.name }}
     </div>       
     <div class="location--card-tilte">
-        Type:
+        Air Date:
     </div>
     <div>
-        {{location.type }}
+        {{episode.air_date }}
     </div>   
     <div class="location--card-tilte">
-        Dimension:
+        Episode code:
     </div>
     <div>
-        {{location.dimension }}
+        {{episode.episode }}
     </div>  
     <div class="location--card-tilte">
-        Residents:
+        Characters:
     </div>
     <div>       
         
         <!-- ProximamenteLink -->
-        <li><a  routerLink="/Characters/{{location.residents}}">Locations</a></li>
+        <!-- <li><a  routerLink="/Characters/{{location.residents}}">Locations</a></li> -->
         <!-- (e=> e.replace(/o/g, '0').replace(/i/g,1)); -->
     </div>        
 </div>
+
+<!-- id: 0,
+name: '',
+air_date:     '',
+episode:    '',
+characters :      [],
+url: '',
+created: '', -->

@@ -17,9 +17,9 @@ export class LocationsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.rickandmortyapiService.getAllLocations()
+    this.rickandmortyapiService.getAllLocationsss()
     .subscribe(data => {
-      this.locations = data;
+      this.locations = data.results;
       
       console.log(this.locations);
     })

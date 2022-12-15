@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LocationsComponent } from './components/locations/locations.component';
+import { EpisodeComponent } from './components/episode/episode.component';
+import { EpisodesComponent } from './components/episodes/episodes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LocationsComponent } from './components/locations/locations.component';
     CharacterComponent,
     CharactersComponent,
     LocationComponent,
-    LocationsComponent
+    LocationsComponent,
+    EpisodeComponent,
+    EpisodesComponent
   ],
   imports: [
     BrowserModule,

@@ -32,7 +32,7 @@ export class CharactersComponent implements OnInit {
     url: '',
     created: ''
   }
-
+  ids : string = '';
 
   constructor(
     private rickandmortyapiService: RickandmortyapiService

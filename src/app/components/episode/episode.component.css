@@ -3,8 +3,8 @@
     justify-content: space-between; */
      padding: 14px 4px 14px 4px;
     border-radius: 4px;
-    border: 1px solid #b1d848; 
-    
+    border: 1px solid ; 
+    border-color: #b1d848;
     display: grid;
     grid-template-columns: 50% 50%;
 }

@@ -37,7 +37,8 @@ export class LocationComponent implements OnInit {
         this.location.residents[i]=this.location.residents[i]?.replace('https://rickandmortyapi.com/api/character/','');
         
       }
-      console.log(this.location.residents?.join(','))
+      // this.location.residents? = this.location.residents?.join(',');
+      console.log('https://rickandmortyapi.com/api/character/'+this.location.residents?.join(','))
       this.cantidadPersonajes = 0;
     }
     
